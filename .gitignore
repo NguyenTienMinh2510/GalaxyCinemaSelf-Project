@@ -7,14 +7,25 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies (Thư viện)
 node_modules
+/jspm_packages
+
+# Production/Build outputs
 dist
 dist-ssr
+build
+out
+
+# Environment variables (File bảo mật - Tuyệt đối không lên Git)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 *.local
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
@@ -22,3 +33,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# VS Code settings (Giữ lại extensions.json để chia sẻ cấu hình khuyên dùng)
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# TypeScript cache
+*.tsbuildinfo
